@@ -148,14 +148,15 @@ const MintedDomain = () => {
 
           // For each name, get the record and the address
           //names.map(async (name: string) => {
+            //id: names.indexOf(name) + 1,
           const mintRecords = await Promise.all(
             names.map(async (tokenId: string) => {
-              const name = await contract['names'](tokenId);
+              const name = await contract['names'](tokenId); 
               console.log('name '+name);
               const mintRecord = await contract['getRecord'](name, 4);
               const owner = await contract['getAddress'](name);
               return {
-                  id: names.indexOf(name) + 1,
+                  id: tokenId,
                   name: name,
                   record: mintRecord,
                   owner: owner
