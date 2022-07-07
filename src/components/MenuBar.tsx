@@ -14,7 +14,7 @@ const MenuBar = () => {
   return (
     <Navbar fixed="top" collapseOnSelect expand="lg" bg="white">
         <Container>
-        <Link to="/"><Navbar.Brand><img src={hpb} width="28"/>&nbsp; boba name service</Navbar.Brand></Link>
+        <Link to="/"><Navbar.Brand><img src={hpb} width="38"/>Tomb Name Service</Navbar.Brand></Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">

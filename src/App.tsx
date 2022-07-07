@@ -10,11 +10,10 @@ import { InjectedConnector } from '@web3-react/injected-connector';
 
 import ConnectButton from './components/ConnectButton';
 import Avatar from './components/Avatar';
-import video from './img/bg.mp4';
 
 const MetaMask = new InjectedConnector({});
 
-const tld = '.boba';
+const tld = '.tomb';
 
 // Constants
 const CONTRACT_ADDRESS = '0x87BB5534eA05Be4e15594103777C1A68687b6FFf';
@@ -349,11 +348,11 @@ const App = () => {
                   <div className="mint-row">
                     <a
                       className="link"
-                      href={`https://tofunft.com/nft/boba/${CONTRACT_ADDRESS}/${mint.id}`}
+                      href={`https://tofunft.com/nft/tomb/${CONTRACT_ADDRESS}/${mint.id}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <p className="underlined">
+                      <p>
                         {mint.name}
                         {tld}
                       </p>
@@ -378,15 +377,12 @@ const App = () => {
   return (
       <div className="body-container">
         <div className="main-container-wrapper">
-          <video autoPlay loop muted>
-            <source src={video} type="video/mp4"/>
-          </video>
           <div className="main-container flex">
             
             {active ? renderInputForm() :
               <>
                 <div className="flex-item left">
-                  <h1>Boba Name<br/>Service
+                  <h1>Tomb Name<br/>Service
                   <button
                   className="cta-button connect-wallet-button"
                   onClick={() => {

@@ -13,7 +13,7 @@ export type MintedProps = {
 };
 
 const CONTRACT_ADDRESS = '0x87BB5534eA05Be4e15594103777C1A68687b6FFf';
-const tld = '.boba';
+const tld = '.tomb';
 
 export type Record = {
   avatar: string;
@@ -291,7 +291,7 @@ export default function RecentlyMinted({ minted, loading, balance, onEdit }: Min
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <p className="underlined">
+                      <p>
                         {mint.name}
                         {tld}
                       </p>
