@@ -13,7 +13,7 @@ import Avatar from './components/Avatar';
 
 const MetaMask = new InjectedConnector({});
 
-const tld = '.tomb';
+const tld = '.fantom';
 
 // Constants
 const CONTRACT_ADDRESS = '0x87BB5534eA05Be4e15594103777C1A68687b6FFf';
@@ -332,7 +332,7 @@ const App = () => {
             </button>
           ) : mintPrice > 0 ? (
             <button className="cta-button mint-button" onClick={mintDomain}>
-              Mint for {mintPrice} $ETH
+              Mint for {mintPrice} $FTM
             </button>
           ) : null}
         </div>
@@ -348,7 +348,7 @@ const App = () => {
                   <div className="mint-row">
                     <a
                       className="link"
-                      href={`https://tofunft.com/nft/tomb/${CONTRACT_ADDRESS}/${mint.id}`}
+                      href={`https://tofunft.com/nft/fantom/${CONTRACT_ADDRESS}/${mint.id}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -382,7 +382,7 @@ const App = () => {
             {active ? renderInputForm() :
               <>
                 <div className="flex-item left">
-                  <h1>Tomb Name<br/>Service
+                  <h1>Fantom Name<br/>Service
                   <button
                   className="cta-button connect-wallet-button"
                   onClick={() => {

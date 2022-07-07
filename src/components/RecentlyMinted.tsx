@@ -13,7 +13,7 @@ export type MintedProps = {
 };
 
 const CONTRACT_ADDRESS = '0x87BB5534eA05Be4e15594103777C1A68687b6FFf';
-const tld = '.tomb';
+const tld = '.fantom';
 
 export type Record = {
   avatar: string;
@@ -246,7 +246,7 @@ export default function RecentlyMinted({ minted, loading, balance, onEdit }: Min
                 </button>
               ) : mintPrice > 0 ? (
                 <button className="cta-button mint-button" disabled={loading} onClick={mintDomain}>
-                  Mint for {mintPrice} $ETH
+                  Mint for {mintPrice} $FTM
                 </button>
               ) : null}
             </div>
