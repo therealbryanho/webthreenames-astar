@@ -13,7 +13,7 @@ import Avatar from './components/Avatar';
 
 const MetaMask = new InjectedConnector({});
 
-const tld = '.fantom';
+const tld = '.astar';
 
 // Constants
 const CONTRACT_ADDRESS = '0x87BB5534eA05Be4e15594103777C1A68687b6FFf';
@@ -348,7 +348,7 @@ const App = () => {
                   <div className="mint-row">
                     <a
                       className="link"
-                      href={`https://tofunft.com/nft/fantom/${CONTRACT_ADDRESS}/${mint.id}`}
+                      href={`https://tofunft.com/nft/astar/${CONTRACT_ADDRESS}/${mint.id}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -381,19 +381,20 @@ const App = () => {
             
             {active ? renderInputForm() :
               <>
-                <div className="flex-item left">
-                  <h1>Fantom Name<br/>Service
+                <div className="flex-item">
+                  <h1>ASTAR Name Service
+                  </h1>
+                  <p className="homedesc">Mint your ASTAR Blockchain domain name</p>
                   <button
-                  className="cta-button connect-wallet-button"
+                  className="connect-wallet-button"
                   onClick={() => {
                     activate(MetaMask);
                   }}
                 >
                   Connect Wallet
                   </button>
-                  </h1>
                 </div>
-                <ConnectButton/>
+                {/*<ConnectButton/>*/}
                 {/*mints && fetchRecentMints()*/}
                 </>
               }

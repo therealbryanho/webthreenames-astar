@@ -16,7 +16,7 @@ declare var window: any
 
 //const MetaMask = new InjectedConnector({});
 
-const tld = '.fantom';
+const tld = '.astar';
 
 // Constants
 const CONTRACT_ADDRESS = '0x87BB5534eA05Be4e15594103777C1A68687b6FFf';

@@ -14,7 +14,8 @@ const networks = {
   "0x52":"Meter Mainnet",
   "0x1C":"Boba Network Rinkeby Testnet",
   "0x120":"Boba Network Mainnet",
-  "0xFA":"Fantom Opera Mainnet"
+  "0xFA":"Fantom Opera Mainnet",
+  "0x250":"Astar"
 }
 
 export { networks };

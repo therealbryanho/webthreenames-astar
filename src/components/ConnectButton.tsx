@@ -7,7 +7,7 @@ export default function ConnectButton() {
 
   return (
     <div className="connect-wallet-container flex-item right">
-      <p>Mint your Fantom Blockchain domain name</p>
+      <p>Mint your ASTAR Blockchain domain name</p>
     </div>
   );
 }

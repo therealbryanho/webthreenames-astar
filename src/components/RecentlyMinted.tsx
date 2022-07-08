@@ -13,7 +13,7 @@ export type MintedProps = {
 };
 
 const CONTRACT_ADDRESS = '0x87BB5534eA05Be4e15594103777C1A68687b6FFf';
-const tld = '.fantom';
+const tld = '.astar';
 
 export type Record = {
   avatar: string;

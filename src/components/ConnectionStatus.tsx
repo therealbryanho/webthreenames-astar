@@ -73,7 +73,7 @@ export default function ConnectionStatus() {
         return (
           <div className="flex-item justify-end">
             <button className="" onClick={() => {switchNetwork(); }}>
-             Switch to Fantom Opera Mainnet
+             Switch to ASTAR Mainnet
               </button>
           </div>
         );
@@ -116,7 +116,7 @@ export default function ConnectionStatus() {
       return (
         <div className="flex-item justify-end">
           <button className="" onClick={() => {switchNetwork();  }}>
-           Switch to Fantom Opera Mainnet
+           Switch to ASTAR Mainnet
             </button>
         </div>
       );
