@@ -56,7 +56,7 @@ const MintedDomain = () => {
     //@ts-ignore
     //if (networks[chainId?.toString(16)] === 'HPB Mainnet') {
     //if( networks[chainId?.toString(16)]?.includes('HPB') ){
-      if (chainId == 80001) {
+      if (chainId == 592) {
         fetchMints();
       }
   

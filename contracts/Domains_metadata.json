@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.14+commit.80d49f37"
+		"version": "0.8.10+commit.fc410830"
 	},
 	"language": "Solidity",
 	"output": {
@@ -888,7 +888,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Domains-Meter.sol": "Domains"
+			"contracts/Domains-Astar.sol": "Domains"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -896,7 +896,7 @@
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": true,
+			"enabled": false,
 			"runs": 200
 		},
 		"remappings": []
@@ -982,12 +982,12 @@
 				"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
 			]
 		},
-		"contracts/Domains-Meter.sol": {
-			"keccak256": "0x86bc19efd3eb02d865afd23b7d309581f855a6663c85cb295f287c1313bd6165",
+		"contracts/Domains-Astar.sol": {
+			"keccak256": "0xb716e8cec6f27d1238568d9e358da14f7bf50d563f164f863e262fdadf140e8c",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://eacb5cec96c121449bbe8035653672b74228b8ae89968d70c78c32bc4da47536",
-				"dweb:/ipfs/QmaaTnZnDCdtZ1RCjuSobSP51VJd5UqERQyGPBJQ7TPPx9"
+				"bzz-raw://0637fe8eb53ef769bc5709cd1d06e6e8f8ba1b7c4476e4f4c5bc873497276bf1",
+				"dweb:/ipfs/QmWQ4cCKAXds2uMy7vHwZjTMh5frQNZmTcPifY61K6cs5Y"
 			]
 		},
 		"contracts/libraries/Base64.sol": {

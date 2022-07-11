@@ -46,7 +46,7 @@ export default function ConnectionStatus() {
       }
     } else {
       //GoHome();
-      if (chainId === 80001 && account === undefined) {
+      if (chainId === 592 && account === undefined) {
         return (
           <div className="flex-item justify-end">
             <img
@@ -69,7 +69,7 @@ export default function ConnectionStatus() {
           </div>
         );  
         
-      } else if (chainId != 80001 && account !== undefined) {
+      } else if (chainId != 592 && account !== undefined) {
         return (
           <div className="flex-item justify-end">
             <button className="" onClick={() => {switchNetwork(); }}>
@@ -84,7 +84,7 @@ export default function ConnectionStatus() {
   };
 
   const connectWallet = () => {
-    if (chainId == 80001) {
+    if (chainId == 592) {
       return (
         <div className="flex-item justify-end">
           <img
@@ -112,7 +112,7 @@ export default function ConnectionStatus() {
         </div>
       );  
       
-    } else if (chainId !== 80001 && account !== undefined) {
+    } else if (chainId !== 592 && account !== undefined) {
       return (
         <div className="flex-item justify-end">
           <button className="" onClick={() => {switchNetwork();  }}>

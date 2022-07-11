@@ -1,3 +1,2 @@
-Use this for styling and testing with Mumbai.
+Astar Name Service contract: 0xADE57B7fbD16504761d046435cEb4c110C79aD89
 
-After all styling confirmed ok, last part then change the Network details and push to the new Blockchain repo.

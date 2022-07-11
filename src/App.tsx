@@ -49,7 +49,7 @@ const App = () => {
 
   useEffect(() => {
     //@ts-ignore
-    if(chainId=== 80001){
+    if(chainId=== 592){
       fetchRecentMints();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -224,7 +224,7 @@ const App = () => {
   const renderInputForm = () => {
     //@ts-ignore
     //if( networks[chainId?.toString(16)]?.includes('HPB') ){
-    if (chainId !== 80001) {
+    if (chainId !== 592) {
       return (
         <div className="connect-wallet-container">
           <h2>Connected to wrong network</h2>
