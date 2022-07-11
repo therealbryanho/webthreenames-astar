@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <div className="footer-container">
-      <a className="footer-text" href={'https://blockexplorer.boba.network/tokens/0xcfD526e356c61f581F8f4685B8440dAE70f61D43/inventory'} target="_blank">Contract 0x5c........4bd0</a>  
+      <a className="footer-text" href={'https://blockscout.com/astar/token/0xADE57B7fbD16504761d046435cEb4c110C79aD89/inventory'} target="_blank">Contract 0x5c........4bd0</a>  
       <br/>
       <a className="footer-text" href={'https://www.webthreenames.com/'} target="_blank">webthreenames.com</a><br/>
        <a className="footer-text" href={'https://twitter.com/webthreenames'} target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"

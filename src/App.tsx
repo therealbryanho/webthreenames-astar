@@ -16,7 +16,7 @@ const MetaMask = new InjectedConnector({});
 const tld = '.astar';
 
 // Constants
-const CONTRACT_ADDRESS = '0x87BB5534eA05Be4e15594103777C1A68687b6FFf';
+const CONTRACT_ADDRESS = '0xADE57B7fbD16504761d046435cEb4c110C79aD89';
 
 export type Record = {
   avatar: string;
@@ -107,7 +107,7 @@ const App = () => {
           records.description
         );
         await tx.wait();
-        console.log('Record set https://blockexplorer.boba.network/tx/' + tx.hash);
+        console.log('Record set https://blockscout.com/astar/tx/' + tx.hash);
 
         setRecords(undefined);
         setDomain('');
@@ -130,7 +130,7 @@ const App = () => {
       return;
     }
     // Calculate price based on length of domain (change this to match your contract)
-    const price = domain.length === 3 ? '0.0055' : domain.length <= 6 ? '0.003' : '0.0015';
+    const price = domain.length === 3 ? '250' : domain.length <= 6 ? '120' : '75';
     console.log('Minting domain', domain, 'with price', price);
     try {
       if (active) {
@@ -146,7 +146,7 @@ const App = () => {
 
         // Check if the transaction was successfully completed
         if (receipt.status === 1) {
-          console.log('Domain minted! https://blockexplorer.boba.network/tx/' + tx.hash);
+          console.log('Domain minted! https://blockscout.com/astar/tx/' + tx.hash);
           setRecords(undefined);
           //setDomain('');
           searchDomain();
@@ -212,11 +212,11 @@ const App = () => {
       })
       .catch(() => {
         if(_domain.length === 3){
-          setMintPrice(0.0055);
+          setMintPrice(250);
         } else if (_domain.length <= 6) {
-          setMintPrice(0.003);
+          setMintPrice(120);
         } else {
-          setMintPrice(0.0015);
+          setMintPrice(75);
         }
       });
   };

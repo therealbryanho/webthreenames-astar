@@ -12,7 +12,7 @@ export type MintedProps = {
   onEdit: (record: any) => void;
 };
 
-const CONTRACT_ADDRESS = '0x87BB5534eA05Be4e15594103777C1A68687b6FFf';
+const CONTRACT_ADDRESS = '0xADE57B7fbD16504761d046435cEb4c110C79aD89';
 const tld = '.astar';
 
 export type Record = {
@@ -48,7 +48,7 @@ export default function RecentlyMinted({ minted, loading, balance, onEdit }: Min
         // Try to switch to the Mumbai testnet
         await library.send(
           'wallet_switchEthereumChain',
-          [{ chainId: '13881' }] // Check networks.js for hexadecimal network ids
+          [{ chainId: '0x250' }] // Check networks.js for hexadecimal network ids
         );
       } catch (error: any) {
         // This error code means that the chain we want has not been added to MetaMask
@@ -57,15 +57,15 @@ export default function RecentlyMinted({ minted, loading, balance, onEdit }: Min
           try {
             await library.send('wallet_addEthereumChain', [
               {
-                chainId: '13881',
-                chainName: 'Polygon Mumbai Testnet',
-                rpcUrls: ['https://rpc-mumbai.maticvigil.com/'],
+                chainId: '0x250',
+                chainName: 'Astar Network',
+                rpcUrls: ['https://evm.astar.network/'],
                 nativeCurrency: {
-                  name: 'Polygon Mumbai Testnet',
-                  symbol: 'MATIC',
+                  name: 'Astar Network',
+                  symbol: 'ASTR',
                   decimals: 18
                 },
-                blockExplorerUrls: ['https://mumbai.polygonscan.com/']
+                blockExplorerUrls: ['https://blockscout.com/astar/']
               }
             ]);
           } catch (error) {
@@ -89,7 +89,7 @@ export default function RecentlyMinted({ minted, loading, balance, onEdit }: Min
       return;
     }
     // Calculate price based on length of domain (change this to match your contract)
-    const price = domain.length === 3 ? '0.0055' : domain.length <= 6 ? '0.003' : '0.0015';
+    const price = domain.length === 3 ? '250' : domain.length <= 6 ? '120' : '75';
     console.log('Minting domain', domain, 'with price', price);
     try {
       if (active) {
@@ -105,7 +105,7 @@ export default function RecentlyMinted({ minted, loading, balance, onEdit }: Min
 
         // Check if the transaction was successfully completed
         if (receipt.status === 1) {
-          console.log('Domain minted! https://blockexplorer.boba.network/tx/' + tx.hash);
+          console.log('Domain minted! https://blockscout.com/astar/tx/' + tx.hash);
 
           setTimeout(() => {
             //fetchMints();
@@ -149,11 +149,11 @@ export default function RecentlyMinted({ minted, loading, balance, onEdit }: Min
       })
       .catch(() => {
         if(_domain.length === 3){
-          setMintPrice(0.0055);
+          setMintPrice(250);
         } else if (_domain.length <= 6) {
-          setMintPrice(0.003);
+          setMintPrice(120);
         } else {
-          setMintPrice(0.0015);
+          setMintPrice(75);
         }
       });
   };
@@ -287,7 +287,7 @@ export default function RecentlyMinted({ minted, loading, balance, onEdit }: Min
                   <div className="mint-row">
                     <a
                       className="link"
-                      href={`https://tofunft.com/nft/boba/${CONTRACT_ADDRESS}/${mint.id}`}
+                      href={`https://tofunft.com/nft/astar/${CONTRACT_ADDRESS}/${mint.id}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >

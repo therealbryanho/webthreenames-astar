@@ -18,7 +18,7 @@ export default function ConnectionStatus() {
       try {
         await library.send(
           'wallet_switchEthereumChain',
-          [{ chainId: '13881' }] // Check networks.js for hexadecimal network ids
+          [{ chainId: '0x250' }] // Check networks.js for hexadecimal network ids
         );
       } catch (error: any) {
         // This error code means that the chain we want has not been added to MetaMask
@@ -27,15 +27,15 @@ export default function ConnectionStatus() {
           try {
             await library.send('wallet_addEthereumChain', [
               {
-                chainId: '13881',
-                chainName: 'Polygon Mumbai Testnet',
-                rpcUrls: ['https://rpc-mumbai.maticvigil.com/'],
+                chainId: '0x250',
+                chainName: 'Astar Network',
+                rpcUrls: ['https://evm.astar.network/'],
                 nativeCurrency: {
-                  name: 'Polygon Mumbai Testnet',
-                  symbol: 'MATIC',
+                  name: 'Astar Network',
+                  symbol: 'ASTR',
                   decimals: 18
                 },
-                blockExplorerUrls: ['https://mumbai.polygonscan.com/']
+                blockExplorerUrls: ['https://blockscout.com/astar/']
               }
             ]);
           } catch (error) {
