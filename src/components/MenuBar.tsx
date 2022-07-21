@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 import ConnectionStatus from '../components/ConnectionStatus';
 import ConnectButton from './ConnectButton';
 import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
-import hpb from '../img/boba-logo.png';
+import hpb from '../img/logo.png';
+import shiden from '../img/shiden-logo.png';
 
 const MenuBar = () => {
   const { account } = useWeb3React();
@@ -24,7 +25,12 @@ const MenuBar = () => {
           <Link to="/domains">My Domains</Link>
         ): (
           <div/>
-          )}            
+          )}    
+          <div className="flex-item justify-end network">
+            <a href="https://shiden.webthreenames.com/" target="_blank">
+            <img src={shiden} width="25"/>Shiden Network
+              </a>
+          </div>        
             <ConnectionStatus />
             </Nav>
         </Navbar.Collapse>

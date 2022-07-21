@@ -2,7 +2,7 @@
 import { useWeb3React } from '@web3-react/core';
 import { InjectedConnector } from '@web3-react/injected-connector';
 import { createImportSpecifier } from 'typescript';
-import hpbLogo from '../img/boba-logo.png';
+import hpbLogo from '../img/logo.png';
 
 const MetaMask = new InjectedConnector({});
 
