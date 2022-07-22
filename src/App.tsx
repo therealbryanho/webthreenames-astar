@@ -332,7 +332,7 @@ const App = () => {
             </button>
           ) : mintPrice > 0 ? (
             <button className="cta-button mint-button" onClick={mintDomain}>
-              Mint for {mintPrice} $FTM
+              Mint for {mintPrice} $ASTR
             </button>
           ) : null}
         </div>
