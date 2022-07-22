@@ -246,7 +246,7 @@ export default function RecentlyMinted({ minted, loading, balance, onEdit }: Min
                 </button>
               ) : mintPrice > 0 ? (
                 <button className="cta-button mint-button" disabled={loading} onClick={mintDomain}>
-                  Mint for {mintPrice} $FTM
+                  Mint for {mintPrice} $ASTR
                 </button>
               ) : null}
             </div>
