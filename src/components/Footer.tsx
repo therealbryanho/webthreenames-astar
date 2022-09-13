@@ -3,13 +3,14 @@ import { useWeb3React } from '@web3-react/core';
 import { InjectedConnector } from '@web3-react/injected-connector';
 import { Navbar, Nav, NavItem, NavDropdown, Container } from 'react-bootstrap';
 import { Link } from "react-router-dom";
+import { CONTRACT_ADDRESS } from '../utils/constants';
 //import ConnectionStatus from '../components/ConnectionStatus';
 
 export default function Footer() {
 
   return (
     <div className="footer-container">
-      <a className="footer-text" href={'https://blockscout.com/astar/token/0xADE57B7fbD16504761d046435cEb4c110C79aD89/inventory'} target="_blank">Contract 0x5c........4bd0</a>  
+      <a className="footer-text" href={'https://scan.meter.io/address/0x7fd85de6312bdbd8d4f625f7b80a254777c00b17?tab=0&p=1'} target="_blank">Contract {CONTRACT_ADDRESS.substring(0, 4)}....{CONTRACT_ADDRESS.substring(CONTRACT_ADDRESS.length-4, CONTRACT_ADDRESS.length )}</a>  
       <br/>
       <a className="footer-text" href={'https://www.webthreenames.com/'} target="_blank">webthreenames.com</a><br/>
        <a className="footer-text" href={'https://twitter.com/webthreenames'} target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
