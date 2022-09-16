@@ -1,14 +1,14 @@
 import { useWeb3React } from '@web3-react/core';
 import { ethers } from 'ethers';
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import {BiSearchAlt} from 'react-icons/bi'
 import loadingGif from '../img/loading9.gif'
-import { CONTRACT_ADDRESS, myContract, tld } from '../utils/constants';
+import { CONTRACT_ADDRESS, mintScanUrlPrefix, myContract, tld } from '../utils/constants';
 
 export const RecentMints = () => {
 
-  const { activate, active, account, library, chainId } = useWeb3React();
+  const { library } = useWeb3React();
   const navigate = useNavigate();
 
   const [mints, setMints] = useState([]);
@@ -71,7 +71,7 @@ export const RecentMints = () => {
                   <div className="mint-row">
                     <a
                       className="link"
-                      href={`https://tofunft.com/nft/boba/${CONTRACT_ADDRESS}/${mint.id}`}
+                      href={`${mintScanUrlPrefix}/${mint.id}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >

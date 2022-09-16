@@ -1,6 +1,6 @@
 import { useWeb3React } from '@web3-react/core';
 import { ethers } from 'ethers';
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Avatar from './Avatar';
 import { BiSearchAlt } from 'react-icons/bi'
@@ -10,7 +10,7 @@ import { AiOutlineClose } from 'react-icons/ai'
 import { CONTRACT_ADDRESS, marketContract, marketContractAddress, myChainId, myContract, tld } from '../utils/constants';
 
 export const Market = () => {
-  const { activate, active, account, library, chainId } = useWeb3React();
+  const { account, library, chainId } = useWeb3React();
 
   const [allListed, setAllListed] = useState([]);
   const [domainData, setDomainData] = useState<any>([]);
@@ -237,14 +237,14 @@ export const Market = () => {
                         </div>
                       </Modal.Body>
                       <Modal.Footer>
-                        <button disabled={makingTransaction} className='mint-button close-button' onClick={() => { closeModal() }}>
+                        {/* <button disabled={makingTransaction} className='mint-button close-button' onClick={() => { closeModal() }}>
                           Close
-                        </button>
+                        </button> */}
                         {makingTransaction
                           ? <p className='mx-4'>{transactionStatus}<img className='loading-gif' src={loadingGif} alt='loading spinner' /></p>
                           :
                           <button className='mint-button ' onClick={() => { buyDomain() }}>
-                            Confirm Buy
+                            Confirm Purchase
                           </button>
                         }
                       </Modal.Footer>

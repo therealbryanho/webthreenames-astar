@@ -1,12 +1,8 @@
-import React, { useState, useEffect } from 'react';
 import { useWeb3React } from '@web3-react/core';
-import { InjectedConnector } from '@web3-react/injected-connector';
-import { Navbar, Nav, NavItem, NavDropdown, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import ConnectionStatus from '../components/ConnectionStatus';
-import ConnectButton from './ConnectButton';
-import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
-import logo from '../img/shiden-logo.png';
+import logo from '../img/logo.png';
 import {MdLogout} from 'react-icons/md'
 
 const MenuBar = () => {

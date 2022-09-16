@@ -8,7 +8,7 @@ import loadingGif from '../img/loading9.gif'
 import { Record } from '../utils/types';
 
 export const DomainRecords = () => {
-  const { activate, active, account, library, chainId } = useWeb3React();
+  const { account, library, chainId } = useWeb3React();
   const { mintName } = useParams();
   const [records, setRecords] = useState<Record | any>({});
   const [isOwner, setIsOwner] = useState(false);

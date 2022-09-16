@@ -1,6 +1,6 @@
 import { useWeb3React } from '@web3-react/core';
 import { ethers } from 'ethers';
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Avatar from './Avatar';
 import { BiSearchAlt } from 'react-icons/bi'
@@ -11,16 +11,13 @@ import { FaEthereum } from 'react-icons/fa'
 import { toWei } from '../utils/unitConvert';
 import { CONTRACT_ADDRESS, marketContract, marketContractAddress, myContract, myNetworkId, tld, myChainId } from '../utils/constants';
 import { Record } from '../utils/types';
-import ConnectionStatus from './ConnectionStatus';
 import { InjectedConnector } from '@web3-react/injected-connector';
 
 
 
-const MetaMask = new InjectedConnector({});
-
 export const MyDomains = () => {
 
-  const { activate, deactivate, active, account, library, chainId } = useWeb3React();
+  const { account, library, chainId } = useWeb3React();
 
   const [loading, setLoading] = useState(true);
   const [myMints, setMyMints] = useState<any>([]);
@@ -290,15 +287,14 @@ export const MyDomains = () => {
                               </div>
                             </Modal.Body>
                             <Modal.Footer>
-                              <button className='mint-button close-button' onClick={closeModal}>
+                              {/* <button className='mint-button close-button' onClick={closeModal}>
                                 Close
-                              </button>
-
+                              </button> */}
                               {makingTransaction
                                 ? <p className='mx-4'>{transactionStatus}<img className='loading-gif' src={loadingGif} alt='loading spinner' /></p>
                                 :
                                 <button type='submit' className='mint-button'>
-                                  List for Sale
+                                  Confirm Listing
                                 </button>
                               }
                             </Modal.Footer>
@@ -313,9 +309,9 @@ export const MyDomains = () => {
                               </div>
                             </Modal.Body>
                             <Modal.Footer>
-                              <button className='mint-button close-button' onClick={closeModal}>
+                              {/* <button className='mint-button close-button' onClick={closeModal}>
                                 Close
-                              </button>
+                              </button> */}
                               {makingTransaction
                                 ? <p className='mx-4'>{transactionStatus}<img className='loading-gif' src={loadingGif} alt='loading spinner' /></p>
                                 :

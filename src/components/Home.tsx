@@ -1,12 +1,10 @@
 import { useWeb3React } from '@web3-react/core';
 import { InjectedConnector } from '@web3-react/injected-connector';
-import React from 'react'
-import ConnectButton from './ConnectButton';
 import { Dashboard } from './Dashboard';
 
 export const Home = () => {
   const MetaMask = new InjectedConnector({});
-  const { activate, active, account, library, chainId } = useWeb3React();
+  const { activate, active } = useWeb3React();
 
   return (
     <div className="main-container flex">
@@ -31,8 +29,6 @@ export const Home = () => {
               Connect Wallet
             </button>
           </div>
-          {/* <ConnectButton /> */}
-          {/*mints && fetchRecentMints()*/}
         </>
       }
     </div>

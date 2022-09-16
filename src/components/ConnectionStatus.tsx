@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { useWeb3React } from '@web3-react/core';
 import { InjectedConnector } from '@web3-react/injected-connector';
-import { createImportSpecifier } from 'typescript';
 import hpbLogo from '../img/logo.png';
 import { myChainId, myNetworkId, networkConnectionObject } from '../utils/constants';
 
@@ -9,10 +8,9 @@ const MetaMask = new InjectedConnector({});
 
 export default function ConnectionStatus() {
 
-  const { activate, active, account, library, chainId } = useWeb3React();
-  //const web3React = useWeb3React();
+  const { activate, account, library, chainId } = useWeb3React();
+
   const switchNetwork = async () => {
-    //activate(MetaMask);
 
     if (account) {
 
@@ -62,7 +60,7 @@ export default function ConnectionStatus() {
         return (
           <div className="flex-item justify-end">
             <button className="" onClick={() => { switchNetwork(); }}>
-              Switch to ASTAR Mainnet
+              Switch to {networkConnectionObject.chainName}
             </button>
           </div>
         );
@@ -118,7 +116,7 @@ export default function ConnectionStatus() {
       return (
         <div className="flex-item justify-end">
           <button className="" onClick={() => { switchNetwork(); }}>
-            Switch to ASTAR Mainnet
+            Switch to {networkConnectionObject.chainName}
           </button>
         </div>
       );

@@ -1,7 +1,6 @@
 import { Web3Provider } from "@ethersproject/providers";
-import { useWeb3React, Web3ReactProvider } from "@web3-react/core";
-import { useEffect } from "react";
-import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import { Web3ReactProvider } from "@web3-react/core";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { DomainRecords } from "./components/DomainRecords";
 import Footer from "./components/Footer";
 import { Home } from "./components/Home";

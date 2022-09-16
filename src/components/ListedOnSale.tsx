@@ -1,6 +1,6 @@
 import { useWeb3React } from '@web3-react/core';
 import { ethers } from 'ethers';
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { CONTRACT_ADDRESS, marketContract, marketContractAddress, myChainId, myContract, tld } from '../utils/constants';
 import Avatar from './Avatar';
@@ -10,7 +10,7 @@ import Modal from 'react-bootstrap/Modal';
 import { AiOutlineClose } from 'react-icons/ai'
 
 export const ListedOnSale = () => {
-  const { activate, active, account, library, chainId } = useWeb3React();
+  const { account, library, chainId } = useWeb3React();
 
   const [myListed, setMyListed] = useState<any>([]);
   const [domainData, setDomainData] = useState<any>([]);
@@ -200,14 +200,14 @@ export const ListedOnSale = () => {
                         </div>
                       </Modal.Body>
                       <Modal.Footer>
-                        <button disabled={makingTransaction} className='mint-button close-button' onClick={() => { closeModal() }}>
+                        {/* <button disabled={makingTransaction} className='mint-button close-button' onClick={() => { closeModal() }}>
                           Close
-                        </button>
+                        </button> */}
                         {makingTransaction
                           ? <p className='mx-4'>{transactionStatus}<img className='loading-gif' src={loadingGif} alt='loading spinner' /></p>
                           :
                           <button className='mint-button' onClick={unlistDomain}>
-                            &nbsp;&nbsp;&nbsp;Unlist&nbsp;&nbsp;&nbsp;
+                           Confirm Unlisting
                           </button>
                         }
                       </Modal.Footer>

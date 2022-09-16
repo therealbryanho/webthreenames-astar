@@ -12,6 +12,9 @@ export const CONTRACT_ADDRESS = '0x87BB5534eA05Be4e15594103777C1A68687b6FFf'; //
 // export const CONTRACT_ADDRESS = '0xADE57B7fbD16504761d046435cEb4c110C79aD89'; //astar address
 export const myContract = contractABI;
 
+export const contractScanURL = `https://blockscout.com/astar/token/${CONTRACT_ADDRESS}`;
+export const mintScanUrlPrefix = `https://tofunft.com/nft/astar/${CONTRACT_ADDRESS}`;
+
 export const marketContractAddress = '0xD5212C78ef3969c04632a71BC6c6116A9c82Be9B';
 export const marketContract = marketContractABI;
 

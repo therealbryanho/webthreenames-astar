@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { CONTRACT_ADDRESS, currency, myContract, priceForLengthEqual3, priceForLengthLessThan6, priceForLengthMoreThan6, tld } from '../utils/constants';
 import loadingGif from '../img/loading9.gif';
 import { useWeb3React } from '@web3-react/core';
 import { ethers } from 'ethers';
 import { useNavigate } from 'react-router-dom';
-// import loadingGif2 from '../img/loading8.gif';
 
 export const SearchMint = () => {
-  const { activate, active, account, library, chainId } = useWeb3React();
+  const { account, library } = useWeb3React();
   const [domain, setDomain] = useState('');
   const [error, setError] = useState('');
   const [mintPrice, setMintPrice] = useState(0);
