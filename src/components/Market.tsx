@@ -7,7 +7,7 @@ import { BiSearchAlt } from 'react-icons/bi'
 import loadingGif from '../img/loading9.gif'
 import Modal from 'react-bootstrap/Modal';
 import { AiOutlineClose } from 'react-icons/ai'
-import { CONTRACT_ADDRESS, marketContract, marketContractAddress, myChainId, myContract, tld } from '../utils/constants';
+import { CONTRACT_ADDRESS, marketContract, marketContractAddress, myChainId, myContract, tld, currency } from '../utils/constants';
 
 export const Market = () => {
   const { account, library, chainId } = useWeb3React();
@@ -233,7 +233,7 @@ export const Market = () => {
                         <div className='modal-body'>
                           <p>Please confirm if you want to buy the selected domain</p>
                           <p>Selected Domain - <b>{selectedDomain.length > 0 && selectedDomain[1].name}{tld}</b></p>
-                          <p>Price - <b>{selectedDomain.length > 0 && ethers.utils.formatEther(selectedDomain[0].price)} eth</b></p>
+                          <p>Price - <b>{selectedDomain.length > 0 && ethers.utils.formatEther(selectedDomain[0].price)} {currency}</b></p>
                         </div>
                       </Modal.Body>
                       <Modal.Footer>
